@@ -46,7 +46,7 @@ Programa::~Programa(){}
 
 Stmt::~Stmt(){}
 
-PrintStmt::PrintStmt(list<Exp*> e) {
+PrintStmt::PrintStmt(vector<Exp*> e) {
     exps=e;
 }
 
@@ -54,7 +54,7 @@ PrintStmt::~PrintStmt() {
 
 }
 
-AsignStmt::AsignStmt(list<string> texto, list<Exp *> e) {
+AsignStmt::AsignStmt(vector<string> texto, vector<Exp *> e) {
     variables=  texto;
     exps = e;
 }

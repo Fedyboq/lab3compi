@@ -5,6 +5,7 @@
 #include <unordered_map>
 #include <list>
 #include <ostream>
+#include <vector>
 
 using namespace std;
 
@@ -75,18 +76,18 @@ public:
 
 class AsignStmt : public Stmt {
 public:
-    list<string> variables;
-    list<Exp*> exps;
+    vector<string> variables;
+    vector<Exp*> exps;
     void accept(Visitor* visitor) override;
-    AsignStmt(list<string>, list<Exp*>);
+    AsignStmt(vector<string>, vector<Exp*>);
     ~AsignStmt();
 };
 
 class PrintStmt : public Stmt {
 public:
-    list<Exp*> exps;
+    vector<Exp*> exps;
     void accept(Visitor* visitor) override;
-    PrintStmt(list<Exp*> e);
+    PrintStmt(vector<Exp*> e);
     ~PrintStmt();
 };
 

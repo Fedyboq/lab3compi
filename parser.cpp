@@ -75,7 +75,7 @@ Programa* Parser::parseP() {
 }
 
 Stmt *Parser::parsestmt() {
-    list<Exp*> ex;
+    vector<Exp*> ex;
     if (match(Token::PRINT)) {
         match(Token::LPAREN);
         Exp* e =parseCEXP();
@@ -88,8 +88,9 @@ Stmt *Parser::parsestmt() {
         return new PrintStmt(ex);
     }
     else if (match(Token::ID)) {
-        list<string> texto ;
-        list<Exp*> exps;
+        vector<string> texto ;
+        vector<Exp*> exps;
+        Exp* e;
         texto.push_back(previous->text);
         if (match(Token::ASSIGN)) {
             e = parseCEXP();
