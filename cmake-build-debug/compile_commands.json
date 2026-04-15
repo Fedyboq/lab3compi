@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/sefedeam/Descargas/Prueba3/cmake-build-debug",
+  "command": "/usr/bin/c++  -I/home/sefedeam/Descargas/Prueba3/. -g -std=gnu++14 -fdiagnostics-color=always -o CMakeFiles/Prueba3.dir/ast.cpp.o -c /home/sefedeam/Descargas/Prueba3/ast.cpp",
+  "file": "/home/sefedeam/Descargas/Prueba3/ast.cpp",
+  "output": "CMakeFiles/Prueba3.dir/ast.cpp.o"
+},
+{
+  "directory": "/home/sefedeam/Descargas/Prueba3/cmake-build-debug",
+  "command": "/usr/bin/c++  -I/home/sefedeam/Descargas/Prueba3/. -g -std=gnu++14 -fdiagnostics-color=always -o CMakeFiles/Prueba3.dir/main.cpp.o -c /home/sefedeam/Descargas/Prueba3/main.cpp",
+  "file": "/home/sefedeam/Descargas/Prueba3/main.cpp",
+  "output": "CMakeFiles/Prueba3.dir/main.cpp.o"
+},
+{
+  "directory": "/home/sefedeam/Descargas/Prueba3/cmake-build-debug",
+  "command": "/usr/bin/c++  -I/home/sefedeam/Descargas/Prueba3/. -g -std=gnu++14 -fdiagnostics-color=always -o CMakeFiles/Prueba3.dir/parser.cpp.o -c /home/sefedeam/Descargas/Prueba3/parser.cpp",
+  "file": "/home/sefedeam/Descargas/Prueba3/parser.cpp",
+  "output": "CMakeFiles/Prueba3.dir/parser.cpp.o"
+},
+{
+  "directory": "/home/sefedeam/Descargas/Prueba3/cmake-build-debug",
+  "command": "/usr/bin/c++  -I/home/sefedeam/Descargas/Prueba3/. -g -std=gnu++14 -fdiagnostics-color=always -o CMakeFiles/Prueba3.dir/scanner.cpp.o -c /home/sefedeam/Descargas/Prueba3/scanner.cpp",
+  "file": "/home/sefedeam/Descargas/Prueba3/scanner.cpp",
+  "output": "CMakeFiles/Prueba3.dir/scanner.cpp.o"
+},
+{
+  "directory": "/home/sefedeam/Descargas/Prueba3/cmake-build-debug",
+  "command": "/usr/bin/c++  -I/home/sefedeam/Descargas/Prueba3/. -g -std=gnu++14 -fdiagnostics-color=always -o CMakeFiles/Prueba3.dir/token.cpp.o -c /home/sefedeam/Descargas/Prueba3/token.cpp",
+  "file": "/home/sefedeam/Descargas/Prueba3/token.cpp",
+  "output": "CMakeFiles/Prueba3.dir/token.cpp.o"
+},
+{
+  "directory": "/home/sefedeam/Descargas/Prueba3/cmake-build-debug",
+  "command": "/usr/bin/c++  -I/home/sefedeam/Descargas/Prueba3/. -g -std=gnu++14 -fdiagnostics-color=always -o CMakeFiles/Prueba3.dir/visitor.cpp.o -c /home/sefedeam/Descargas/Prueba3/visitor.cpp",
+  "file": "/home/sefedeam/Descargas/Prueba3/visitor.cpp",
+  "output": "CMakeFiles/Prueba3.dir/visitor.cpp.o"
+}
+]

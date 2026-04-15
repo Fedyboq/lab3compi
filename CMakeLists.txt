@@ -16,4 +16,9 @@ add_executable(Prueba3
         token.cpp
         token.h
         visitor.cpp
-        visitor.h)
+        visitor.h
+        parser.cpp
+        parser.h
+        parser.cpp
+        parser.cpp
+        parser.h)

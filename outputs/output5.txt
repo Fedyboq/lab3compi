@@ -1,4 +1,11 @@
 === STDOUT ===
+Parseo exitoso
+Codigo:
+x = 10
+y = 4
+m = min(x,y)
+print (m)
+
+Interprete:4
 
 === STDERR ===
-Error al parsear: Error sintáctico

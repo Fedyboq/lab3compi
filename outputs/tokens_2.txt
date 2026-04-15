@@ -10,8 +10,6 @@ TOKEN(NUM, "8")
 TOKEN(SEMICOL, ";")
 TOKEN(PRINT, "print")
 TOKEN(LPAREN, "(")
-TOKEN(ERR, "'")
-Caracter invalido
-
-Scanner no exitoso
-
+TOKEN(STRING, "x=")
+TOKEN(STRING, ", x, ")
+TOKEN(STRING, " y=")

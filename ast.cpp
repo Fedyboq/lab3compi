@@ -40,6 +40,16 @@ SqrtExp::SqrtExp(Exp* v) : value(v) {}
 
 SqrtExp::~SqrtExp() {}
 
+// ------------------ MinExp ------------------
+MinExp::MinExp(list<Exp*> e) : exps(e) {}
+
+MinExp::~MinExp() {
+    for (Exp* exp : exps) {
+        delete exp;
+    }
+    exps.clear();
+}
+
 //
 Programa::Programa() {}
 Programa::~Programa(){}

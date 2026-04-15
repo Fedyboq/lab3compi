@@ -10,11 +10,18 @@ TOKEN(NUM, "4")
 TOKEN(SEMICOL, ";")
 TOKEN(ID, "m")
 TOKEN(ASSIGN, "=")
-TOKEN(ID, "min")
+TOKEN(MIN, "min")
 TOKEN(LPAREN, "(")
 TOKEN(ID, "x")
-TOKEN(ERR, ",")
-Caracter invalido
+TOKEN(COMA, ",")
+TOKEN(ID, "y")
+TOKEN(RPAREN, ")")
+TOKEN(SEMICOL, ";")
+TOKEN(PRINT, "print")
+TOKEN(LPAREN, "(")
+TOKEN(ID, "m")
+TOKEN(RPAREN, ")")
+TOKEN(END)
 
-Scanner no exitoso
+Scanner exitoso
 

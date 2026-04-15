@@ -1,3 +1,3 @@
-C:/Users/Federico/Downloads/Prueba3/cmake-build-debug/CMakeFiles/Prueba3.dir
-C:/Users/Federico/Downloads/Prueba3/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Federico/Downloads/Prueba3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sefedeam/Descargas/Prueba3/cmake-build-debug/CMakeFiles/Prueba3.dir
+/home/sefedeam/Descargas/Prueba3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/sefedeam/Descargas/Prueba3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

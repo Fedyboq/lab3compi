@@ -64,8 +64,17 @@ public:
     int accept(Visitor* visitor);
     SqrtExp(Exp* v);
     ~SqrtExp();
-}
-;
+};
+
+// Minimo
+class MinExp : public Exp {
+public:
+    list<Exp*> exps;
+    int accept(Visitor* visitor);
+    MinExp(list<Exp*> e);
+    ~MinExp();
+};
+
 
 class Stmt{
 public:
@@ -75,8 +84,8 @@ public:
 
 class AsignStmt : public Stmt {
 public:
-    list<string> variables;
-    list<Exp*> exps;
+    string variable;
+    Exp* exp;
     void accept(Visitor* visitor) override;
     AsignStmt(string, Exp*);
     ~AsignStmt();
@@ -84,7 +93,7 @@ public:
 
 class PrintStmt : public Stmt {
 public:
-    list<Exp*> exps;
+    Exp* exp;
     void accept(Visitor* visitor) override;
     PrintStmt(Exp* e);
     ~PrintStmt();

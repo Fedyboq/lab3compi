@@ -5,8 +5,8 @@
 #include <unordered_map>
 
 class BinaryExp;
-class NumberExp;
 class SqrtExp;
+class MinExp;
 
 class Visitor {
 public:
@@ -14,6 +14,7 @@ public:
     virtual int visit(NumberExp* exp) = 0;
     virtual int visit(IdExp* exp) = 0;
     virtual int visit(SqrtExp* exp) = 0;
+    virtual int visit(MinExp* exp) = 0;
     virtual void visit(AsignStmt* stm) = 0;
     virtual void visit(PrintStmt* stm) = 0;
     virtual void visit(Programa* program) = 0;
@@ -25,6 +26,7 @@ public:
     int visit(BinaryExp* exp) override;
     int visit(NumberExp* exp) override;
     int visit(SqrtExp* exp) override;
+    int visit(MinExp* exp) override;
     void visit(AsignStmt* stm) override;
     void visit(PrintStmt* stm) override;
     void visit(Programa* program) override;
@@ -38,6 +40,7 @@ public:
     int visit(BinaryExp* exp) override;
     int visit(NumberExp* exp) override;
     int visit(SqrtExp* exp) override;
+    int visit(MinExp* exp) override;
     void visit(AsignStmt* stm) override;
     void visit(PrintStmt* stm) override;
     int visit(IdExp* exp) override;

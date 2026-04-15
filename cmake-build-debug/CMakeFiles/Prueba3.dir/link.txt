@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/Prueba3.dir/link.d CMakeFiles/Prueba3.dir/ast.cpp.o CMakeFiles/Prueba3.dir/main.cpp.o CMakeFiles/Prueba3.dir/parser.cpp.o CMakeFiles/Prueba3.dir/scanner.cpp.o CMakeFiles/Prueba3.dir/token.cpp.o CMakeFiles/Prueba3.dir/visitor.cpp.o -o Prueba3

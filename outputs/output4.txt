@@ -1,4 +1,9 @@
 === STDOUT ===
+Parseo exitoso
+Codigo:
+m = min(7,3)
+print (m)
+
+Interprete:3
 
 === STDERR ===
-Error al parsear: Error sintáctico

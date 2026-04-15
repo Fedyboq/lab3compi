@@ -24,6 +24,10 @@ int SqrtExp::accept(Visitor* visitor) {
     return visitor->visit(this);
 }
 
+int MinExp::accept(Visitor* visitor) {
+    return visitor->visit(this);
+}
+
 void PrintStmt::accept(Visitor* visitor) {
     visitor->visit(this);
 }
@@ -54,6 +58,21 @@ int PrintVisitor::visit(SqrtExp* exp) {
     cout << "sqrt(";
     exp->value->accept(this);
     cout <<  ")";
+    return 0;
+}
+
+int PrintVisitor::visit(MinExp* exp) {
+    cout << "min(";
+    auto it = exp->exps.begin();
+    if (it != exp->exps.end()) {
+        (*it)->accept(this);
+        ++it;
+    }
+    for (; it != exp->exps.end(); ++it) {
+        cout << ",";
+        (*it)->accept(this);
+    }
+    cout << ")";
     return 0;
 }
 
@@ -107,6 +126,20 @@ int EVALVisitor::visit(NumberExp* exp) {
 
 int EVALVisitor::visit(SqrtExp* exp) {
     return floor(sqrt( exp->value->accept(this)));
+}
+
+int EVALVisitor::visit(MinExp* exp) {
+    if (exp->exps.empty()) return 0;
+    auto it = exp->exps.begin();
+    int min_val = (*it)->accept(this);
+    ++it;
+    for (; it != exp->exps.end(); ++it) {
+        int val = (*it)->accept(this);
+        if (val < min_val) {
+            min_val = val;
+        }
+    }
+    return min_val;
 }
 
 

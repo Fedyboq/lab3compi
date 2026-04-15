@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <stdexcept>
 #include "token.h"
 #include "scanner.h"
@@ -155,6 +155,17 @@ Exp* Parser::parseF() {
         e = parseCEXP();
         match(Token::RPAREN);
         return new SqrtExp(e);
+    }
+    else if (match(Token::MIN))
+    {
+        match(Token::LPAREN);
+        list<Exp*> args;
+        args.push_back(parseCEXP());
+        while (match(Token::COMMA)) {
+            args.push_back(parseCEXP());
+        }
+        match(Token::RPAREN);
+        return new MinExp(args);
     }
     else {
         throw runtime_error("Error sintáctico");
