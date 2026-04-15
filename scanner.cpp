@@ -55,12 +55,15 @@ Token* Scanner::nextToken() {
         string lexema = input.substr(first, current - first);
         if (lexema=="sqrt") return new Token(Token::SQRT, input, first, current - first);
         if (lexema=="print") return new Token(Token::PRINT, input, first, current - first);
+        if (lexema=="min") return new Token(Token::MIN, input, first, current - first);
         else return new Token(Token::ID, input, first, current - first);
     }
     // Operadores
-    else if (strchr("+/-*();=", c)) {
+    else if (strchr("+/-*();,'=", c)) {
         switch (c) {
             case ';': token = new Token(Token::SEMICOL,  c); break;
+            case ',': token = new Token(Token::COMMA,  c); break;
+            case ')': token = new Token(Token::RPAREN,c); break;
             case '=': token = new Token(Token::ASSIGN, c); break;
             case '+': token = new Token(Token::PLUS,  c); break;
             case '-': token = new Token(Token::MINUS, c); break;
@@ -76,7 +79,12 @@ Token* Scanner::nextToken() {
             break;
             case '/': token = new Token(Token::DIV,   c); break;
             case '(': token = new Token(Token::LPAREN,c); break;
-            case ')': token = new Token(Token::RPAREN,c); break;
+            case '\'':
+                while (input[current+1] != '\'') {
+                    current++;
+                }
+                token = new Token(Token::STRING,input, first+1, current - first);
+
         }
         current++;
     }

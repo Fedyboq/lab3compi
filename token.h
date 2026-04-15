@@ -20,6 +20,9 @@ public:
         PRINT,
         SEMICOL,
         ASSIGN,
+        COMMA,
+        MIN,
+        STRING,
         SQRT,    // sqrt
         NUM,     // Número
         ERR,     // Error
