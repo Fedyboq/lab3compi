@@ -75,18 +75,40 @@ Programa* Parser::parseP() {
 }
 
 Stmt *Parser::parsestmt() {
-    Exp* e;
+    vector<Exp*> ex;
     if (match(Token::PRINT)) {
         match(Token::LPAREN);
-        e = parseCEXP();
+        Exp* e =parseCEXP();
+        ex.push_back(e);
+        while (match(Token::COMMA)) {
+            e = parseCEXP();
+            ex.push_back(e);
+        }
         match(Token::RPAREN);
-        return new PrintStmt(e);
+        return new PrintStmt(ex);
     }
     else if (match(Token::ID)) {
-        string texto = previous->text;
+        vector<string> texto ;
+        vector<Exp*> exps;
+        Exp* e;
+        texto.push_back(previous->text);
+        if (match(Token::ASSIGN)) {
+            e = parseCEXP();
+            exps.push_back(e);
+            return new AsignStmt(texto,exps);
+        }
+        while (match(Token::COMMA)) {
+            texto.push_back(current->text);
+        }
         match(Token::ASSIGN);
+        match(Token::LPAREN);
         e = parseCEXP();
-        return new AsignStmt(texto,e);
+        exps.push_back(e);
+        while (match(Token::COMMA)) {
+            e = parseCEXP();
+            exps.push_back(e);
+        }
+        return  new AsignStmt(texto,exps);
     }
 }
 

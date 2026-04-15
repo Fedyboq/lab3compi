@@ -154,7 +154,9 @@ void EVALVisitor::interprete(Programa* programa){
 }
 
 void EVALVisitor::visit(AsignStmt *stm) {
-    memoria[stm->variable]=stm->exp->accept(this);
+    for (int i = 0; i<stm->variables.size();i++) {
+        memoria[stm->variables[i] = stm->exps[i]->accept(this)];
+    }
 }
 
 int EVALVisitor::visit(IdExp *e) {
@@ -163,7 +165,9 @@ int EVALVisitor::visit(IdExp *e) {
 
 
 void EVALVisitor::visit(PrintStmt *stm) {
-    cout << stm->exp->accept(this);
+    for (int i=0;i<stm->exps.size();i++) {
+        cout << stm->exps[i]->accept(this) << endl;
+    }
 }
 
 void EVALVisitor::visit(Programa *p) {
@@ -175,13 +179,21 @@ void EVALVisitor::visit(Programa *p) {
 
 
 void PrintVisitor::visit(AsignStmt *stm) {
-    cout << stm->variable << " = ";
-    stm->exp->accept(this);
-    cout << endl;
+    for (int i=0;i<stm->variables.size()-1;i++) {
+        cout << stm->variables[i] <<',';
+    }
+    cout << stm->variables[stm->variables.size()-1];
+    cout << " = (";
+    for (int i=0;i<stm->exps.size();i++) {
+        stm->exps[i]->accept(this);
+    }
+    cout << ')'<<endl;
 }
 void PrintVisitor::visit(PrintStmt *stm) {
     cout << "print (";
-    stm->exp->accept(this);
+    for (int i=0;i<stm->exps.size();i++) {
+        stm->exps[i]->accept(this);
+    }
     cout << ")"<< endl;
 }
 

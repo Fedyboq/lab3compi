@@ -56,17 +56,17 @@ Programa::~Programa(){}
 
 Stmt::~Stmt(){}
 
-PrintStmt::PrintStmt(Exp* e) {
-    exp=e;
+PrintStmt::PrintStmt(vector<Exp*> e) {
+    exps=e;
 }
 
 PrintStmt::~PrintStmt() {
 
 }
 
-AsignStmt::AsignStmt(string texto, Exp * e) {
-    variable=  texto;
-    exp = e;
+AsignStmt::AsignStmt(vector<string> texto, vector<Exp *> e) {
+    variables=  texto;
+    exps = e;
 }
 
 AsignStmt::~AsignStmt() {
