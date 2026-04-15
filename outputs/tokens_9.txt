@@ -1,0 +1,16 @@
+Scanner
+
+TOKEN(ID, "m")
+TOKEN(ASSIGN, "=")
+TOKEN(NUM, "7")
+TOKEN(SEMICOL, ";")
+TOKEN(ID, "n")
+TOKEN(ASSIGN, "=")
+TOKEN(NUM, "2")
+TOKEN(SEMICOL, ";")
+TOKEN(ID, "r1")
+TOKEN(ERR, ",")
+Caracter invalido
+
+Scanner no exitoso
+
