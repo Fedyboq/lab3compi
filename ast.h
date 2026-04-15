@@ -78,7 +78,7 @@ public:
     list<string> variables;
     list<Exp*> exps;
     void accept(Visitor* visitor) override;
-    AsignStmt(string, Exp*);
+    AsignStmt(list<string>, list<Exp*>);
     ~AsignStmt();
 };
 
@@ -86,7 +86,7 @@ class PrintStmt : public Stmt {
 public:
     list<Exp*> exps;
     void accept(Visitor* visitor) override;
-    PrintStmt(Exp* e);
+    PrintStmt(list<Exp*> e);
     ~PrintStmt();
 };
 
